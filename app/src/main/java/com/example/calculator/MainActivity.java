@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         mainScreen.setShowSoftInputOnFocus(false);
 
         secondScreen = findViewById(R.id.second_screen);
+        secondScreen.setShowSoftInputOnFocus(false);
     }
 
     @Override
