@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_primary"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_container"
+        android:background="@drawable/screen_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="-20dp"
+            android:enabled="false"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/second_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="false"
+                android:fontFamily="@font/orbitron"
+                android:inputType="none"
+                android:textAlignment="textEnd"
+                android:textColor="@color/primary_text"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:boxStrokeWidth="0dp"
+            app:boxStrokeWidthFocused="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/main_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="false"
+                android:fontFamily="@font/orbitron"
+                android:inputType="none"
+                android:textAlignment="textEnd"
+                android:textColor="@color/primary_text"
+                android:textSize="34sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        tools:ignore="UselessParent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-14dp"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="76dp"
+                android:background="@drawable/backspace_bg"
+                android:text="@string/_1">
+
+                <ImageView
+                    android:id="@+id/btn_backspace"
+                    android:layout_width="80dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:onClick="btnBackspace"
+                    android:src="@drawable/ic_baseline_backspace_24"
+                    tools:ignore="ContentDescription" />
+
+            </FrameLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-14dp"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_ac"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnAc"
+                    android:text="@string/ac"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_bracket"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnBracket"
+                    android:text="@string/bracket"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_square"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnSquare"
+                    android:text="@string/square"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/operator_bg"
+                android:text="@string/_1">
+
+                <TextView
+                    android:id="@+id/btn_add"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnAdd"
+                    android:text="@string/add"
+                    android:textColor="@color/text_color"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-14dp"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_7"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnSeven"
+                    android:text="@string/_7"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_8"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnEight"
+                    android:text="@string/_8"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_9"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnNine"
+                    android:text="@string/_9"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/operator_bg"
+                android:text="@string/_1">
+
+                <TextView
+                    android:id="@+id/btn_minus"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnMinus"
+                    android:text="@string/minus"
+                    android:textColor="@color/text_color"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-14dp"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnFour"
+                    android:text="@string/_4"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_5"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnFive"
+                    android:text="@string/_5"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_6"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnSix"
+                    android:text="@string/_6"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/operator_bg"
+                android:text="@string/_1">
+
+                <TextView
+                    android:id="@+id/btn_multiply"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnMultiply"
+                    android:text="@string/multiply"
+                    android:textColor="@color/text_color"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="-14dp"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnOne"
+                    android:text="@string/_1"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnTwo"
+                    android:text="@string/_2"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnThree"
+                    android:text="@string/_3"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/operator_bg"
+                android:text="@string/_1">
+
+                <TextView
+                    android:id="@+id/btn_divisible"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnDivide"
+                    android:text="@string/divisible"
+                    android:textColor="@color/text_color"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_plus_minus"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnPercentage"
+                    android:text="@string/percentage"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_0"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnZero"
+                    android:text="@string/_0"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="-14dp"
+                android:background="@drawable/button_bg">
+
+                <TextView
+                    android:id="@+id/btn_dot"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnDecimal"
+                    android:text="@string/dot"
+                    android:textColor="@color/primary_text"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/operator_bg"
+                android:text="@string/_1">
+
+                <TextView
+                    android:id="@+id/btn_equal"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/orbitron"
+                    android:gravity="center"
+                    android:onClick="btnEqual"
+                    android:text="@string/equal"
+                    android:textColor="@color/text_color"
+                    android:textSize="24sp" />
+
+            </FrameLayout>
+
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
+
